@@ -60,9 +60,9 @@ firstAndPike.render();
 // Seatac Airport Location
 var seatacAirport = {
   name: 'Seatac Airport',
-  minCustPerHour: 23,
-  maxCustPerHour: 65,
-  avgCookieSoldPerHour: 6.3,
+  minCustPerHour: 10,
+  maxCustPerHour: 50,
+  avgCookieSoldPerHour: 3.3,
   randCustByHour: [],
   cookiesSoldByHour: [],
   totalCookies: 0,
@@ -109,9 +109,9 @@ seatacAirport.render();
 // Seattle Center Location
 var seattleCenter = {
   name: 'Seattle Center',
-  minCustPerHour: 23,
-  maxCustPerHour: 65,
-  avgCookieSoldPerHour: 6.3,
+  minCustPerHour: 33,
+  maxCustPerHour: 80,
+  avgCookieSoldPerHour: 10.1,
   randCustByHour: [],
   cookiesSoldByHour: [],
   totalCookies: 0,
@@ -158,9 +158,9 @@ seattleCenter.render();
 // Capitol Hill Location
 var capitolHill = {
   name: 'Capitol Hill',
-  minCustPerHour: 23,
-  maxCustPerHour: 65,
-  avgCookieSoldPerHour: 6.3,
+  minCustPerHour: 80,
+  maxCustPerHour: 120,
+  avgCookieSoldPerHour: 22,
   randCustByHour: [],
   cookiesSoldByHour: [],
   totalCookies: 0,
@@ -207,9 +207,9 @@ capitolHill.render();
 // Alki Beach Location
 var alki = {
   name: 'Alki',
-  minCustPerHour: 23,
-  maxCustPerHour: 65,
-  avgCookieSoldPerHour: 6.3,
+  minCustPerHour: 18,
+  maxCustPerHour: 45,
+  avgCookieSoldPerHour: 4.7,
   randCustByHour: [],
   cookiesSoldByHour: [],
   totalCookies: 0,
