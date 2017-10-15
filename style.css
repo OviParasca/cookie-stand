@@ -1,5 +1,45 @@
+<<<<<<< HEAD
 table, th, td {
     border: 1px solid black;
     text-align: center;
     padding: 5px;
+=======
+/*table, th, td {
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+}*/
+
+
+* {
+ font-family: Helvetica;
+ font-size: 12px;
+}
+
+h3 {
+ font-size: 22px;
+ text-align: center;
+ width: 1000px;
+ color: #42c583;
+}
+
+table {
+ border: solid black 1px;
+}
+
+
+th {
+ width: 60px;
+ border: solid black 1px;
+}
+
+td {
+ text-align: center;
+ height: 30px;
+ border: solid black 1px;
+}
+
+table tr:nth-child(odd) td {
+  background-color: #d3d3d3;
+>>>>>>> df8f9e81ab3e1d9717d9f28db3ee27d0583defa7
 }
