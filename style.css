@@ -1,11 +1,19 @@
 * {
  font-family: Helvetica;
- font-size: 12px;
+ font-size: 14px;
 }
 
 table {
- border: solid black 1px;
- margin: 0 auto;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+/* all the elements inside the table will inherit from this */
+table * {
+ height: 30px;
+ width: 80px;
+ padding: 5px;
+ border: solid black 1px; 
 }
 
 /* set a separate color for the header/footer rows */
@@ -17,14 +25,12 @@ table tr:first-child, tr:last-child {
 /* header cell */
 th {
  width: 60px;
- border: solid black 1px;
 }
 
 /* standard cell */
 td {
  text-align: center;
  height: 30px;
- border: solid black 1px;
 }
 
 /* set a gray background color for alternating rows */
@@ -36,4 +42,10 @@ table tr:nth-child(odd) td {
 table tr td:last-child, th:last-child {
   color: white;
   background-color: rgb(73, 152, 255);
+}
+
+/* cell hover function */
+table tr td:hover {
+  color: black;
+  background-color: yellow;
 }

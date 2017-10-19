@@ -42,9 +42,9 @@ function MakeLocation(name, minCustPerHour, maxCustPerHour, avgCookieSoldPerHour
 function createStands() {
   new MakeLocation('1st and Pike', 23, 65, 6.3);
   new MakeLocation('SeaTac Airport', 3, 24, 1.2);
-  new MakeLocation('Seattle Center', 45, 85, 10.1);
-  new MakeLocation('Capitol Hill', 60, 95, 14.5);
-  new MakeLocation('Alki', 35, 52, 7.0);
+  new MakeLocation('Seattle Center', 25, 55, 13.1);
+  new MakeLocation('Capitol Hill', 10, 45, 10.5);
+  new MakeLocation('Alki', 12, 22, 7.0);
 };
 createStands();
 
@@ -72,7 +72,7 @@ function createTableHeaderFooter(location, inputArray, totals) {
   trEl.appendChild(tdEl);
   tableEl.appendChild(trEl); 
 }
-createTableHeaderFooter('Location', hoursArr, 'Totals')
+createTableHeaderFooter('Store Hours', hoursArr, 'Daily Totals')
 
 // create the rows for the locations, cookies, and their totals for the day
 function createTableBody(location, inputArray, totals) {
@@ -128,6 +128,6 @@ function calculateNetTotals() {
     // console.log('totals for ' + hoursArr[i] + ' : ' + grandTotal);    
     totalsArr.push(hourlyTotals);
   }
-  createTableHeaderFooter('Totals', totalsArr, grandTotal);  
+  createTableHeaderFooter('Hourly Totals', totalsArr, grandTotal);  
 }
 calculateNetTotals();
