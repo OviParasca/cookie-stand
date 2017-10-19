@@ -1,42 +1,39 @@
-/*table, th, td {
-    border: 1px solid black;
-    text-align: center;
-    padding: 5px;
-}*/
-
-
 * {
  font-family: Helvetica;
  font-size: 12px;
 }
 
-h3 {
- font-size: 22px;
- text-align: center;
- width: 1000px;
- color: #42c583;
-}
-
 table {
  border: solid black 1px;
+ margin: 0 auto;
 }
 
+/* set a separate color for the header/footer rows */
 table tr:first-child, tr:last-child {
   color : white;
   background-color: #8a8a8a;
 }
 
+/* header cell */
 th {
  width: 60px;
  border: solid black 1px;
 }
 
+/* standard cell */
 td {
  text-align: center;
  height: 30px;
  border: solid black 1px;
 }
 
+/* set a gray background color for alternating rows */
 table tr:nth-child(odd) td {
   background-color: #d3d3d3;
+}
+
+/* set the last cell in each row to a different color to showcase the totals for the day at that location */
+table tr td:last-child, th:last-child {
+  color: white;
+  background-color: rgb(73, 152, 255);
 }
