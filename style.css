@@ -4,15 +4,14 @@
 }
 
 table {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   border-collapse: collapse;
 }
 
-/* all the elements inside the table will inherit from this */
+/* all the elements inside the table will inherit from this block*/
 table * {
  height: 30px;
  width: 80px;
- padding: 5px;
  border: solid black 1px; 
 }
 
@@ -48,4 +47,36 @@ table tr td:last-child, th:last-child {
 table tr td:hover {
   color: black;
   background-color: yellow;
+}
+
+
+/* testing */
+
+input[type=text], select, textarea {
+  width: 50%;
+  padding: 12px; 
+  border: 1px solid #ccc;
+  border-radius: 4px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* hover over the submit button */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 20px;
 }

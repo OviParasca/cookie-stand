@@ -99,18 +99,34 @@ function createTableBody(location, inputArray, totals) {
 }
 
 // helper method to calculate the totals for each location
-function createData() {
+// function createData() {
+//   for (var i = 0; i < allLocations.length; i++) {
+//     var totals = 0;
+//     for (var j = 0; j < allLocations[i].cookiesSoldByHour.length; j++) {
+//       // console.log('location: ' + allLocations[i].name + ' ' + allLocations[i].cookiesSoldByHour[j]);
+//       totals += allLocations[i].cookiesSoldByHour[j];
+//     }
+//     // console.log('net total for the day at ' + allLocations[i].name + ' : ' + totals);    
+//     createTableBody(allLocations[i].name, allLocations[i].cookiesSoldByHour, totals);
+//   }
+// }
+// createData();
+
+function createLocationRow(int) {
+  var totals = 0;
+  for (var j = 0; j < allLocations[int].cookiesSoldByHour.length; j++) {
+    // console.log('location: ' + allLocations[i].name + ' ' + allLocations[i].cookiesSoldByHour[j]);
+    totals += allLocations[int].cookiesSoldByHour[j];
+  }
+  // console.log('net total for the day at ' + allLocations[i].name + ' : ' + totals);    
+  createTableBody(allLocations[int].name, allLocations[int].cookiesSoldByHour, totals);
+}
+function createTable() {
   for (var i = 0; i < allLocations.length; i++) {
-    var totals = 0;
-    for (var j = 0; j < allLocations[i].cookiesSoldByHour.length; j++) {
-      // console.log('location: ' + allLocations[i].name + ' ' + allLocations[i].cookiesSoldByHour[j]);
-      totals += allLocations[i].cookiesSoldByHour[j];
-    }
-    // console.log('net total for the day at ' + allLocations[i].name + ' : ' + totals);    
-    createTableBody(allLocations[i].name, allLocations[i].cookiesSoldByHour, totals);
+    createLocationRow(i);
   }
 }
-createData();
+createTable();
 
 // create the footer rows of the table
 function calculateNetTotals() {
@@ -131,3 +147,33 @@ function calculateNetTotals() {
   createTableHeaderFooter('Hourly Totals', totalsArr, grandTotal);  
 }
 calculateNetTotals();
+
+
+// Submit button event
+// remove the totals row, add a new store location, then add that row and the newly update totals row
+document.getElementById('submitBtn').addEventListener('click', function() {
+  var storeName = document.getElementById('storeName').value;
+  var minCust = document.getElementById('minCust').value;
+  var maxCust = document.getElementById('maxCust').value;
+  var avgCookies = document.getElementById('avgCookies').value;
+
+  // clear the inputs and remove the totals row
+  clearInputFields();
+  deleteLastRow();
+
+  // append and update the new data
+  new MakeLocation(storeName, minCust, maxCust, avgCookies);
+  createLocationRow(tableEl.rows.length-1);
+  calculateNetTotals();
+})
+
+function deleteLastRow() {
+  var rowCount = tableEl.rows.length;
+  tableEl.deleteRow(rowCount -1);
+}
+
+function clearInputFields() {
+  var form = document.getElementById("store-form");
+  form.reset();
+}
+
