@@ -10,18 +10,18 @@
         <fieldset>
           <legend>Add Store Location</legend>
           <label for="storename">Name of Location:</label>
-          <input type="text" name="storename" placeholder="Store Name"><br>
+          <input id="storeName" type="text" name="storename" placeholder="Store Name"><br>
 
           <label for="mincust">Minimum Customers per Hour:</label>
-          <input type="text" name="minCust" placeholder="Minimum # of Customers"><br>          
+          <input id="minCust" type="text" name="minCust" placeholder="Minimum # of Customers"><br>          
 
           <label for="maxcust">Maximum Customers per Hour:</label>
-          <input type="text" name="maxCust" placeholder="Maximum # of Customers"><br>          
+          <input id="maxCust" type="text" name="maxCust" placeholder="Maximum # of Customers"><br>          
 
           <label for="avgcook">Average Cookies per Sale:</label>
-          <input type="text" name="avgcook" placeholder="Average # of Cookies per sale"><br>          
+          <input id="avgCookies" type="text" name="avgcook" placeholder="Average # of Cookies per sale"><br>          
 
-          <input type="submit" value="Add New Store">
+          <input id="submitBtn" type="submit" value="Add New Store" onclick="return false">
         </fieldset>
       </form>
     <table id="cookieTable">
