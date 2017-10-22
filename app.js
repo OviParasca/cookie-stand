@@ -99,19 +99,6 @@ function createTableBody(location, inputArray, totals) {
 }
 
 // helper method to calculate the totals for each location
-// function createData() {
-//   for (var i = 0; i < allLocations.length; i++) {
-//     var totals = 0;
-//     for (var j = 0; j < allLocations[i].cookiesSoldByHour.length; j++) {
-//       // console.log('location: ' + allLocations[i].name + ' ' + allLocations[i].cookiesSoldByHour[j]);
-//       totals += allLocations[i].cookiesSoldByHour[j];
-//     }
-//     // console.log('net total for the day at ' + allLocations[i].name + ' : ' + totals);    
-//     createTableBody(allLocations[i].name, allLocations[i].cookiesSoldByHour, totals);
-//   }
-// }
-// createData();
-
 function createLocationRow(int) {
   var totals = 0;
   for (var j = 0; j < allLocations[int].cookiesSoldByHour.length; j++) {
