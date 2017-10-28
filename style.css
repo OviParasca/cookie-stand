@@ -1,10 +1,57 @@
+/* misc  */
 * {
  font-family: Helvetica;
  font-size: 14px;
 }
 
+.container {
+  margin-bottom: 40px;  
+}
+
+
+/* Field Set attributes */
+fieldset {
+  background-color: #d3d3d3;
+}
+
+fieldset legend {
+  background-color: white;
+  font-size: 20px;
+  border: 1px solid black;
+  border-radius: 4px; 
+  box-sizing: border-box;   
+}
+
+fieldset label {
+  font-size: 16px !important;
+}
+
+input[type=text], select, textarea {
+  width: 50%;
+  padding: 12px; 
+  border: 1px solid black;
+  border-radius: 4px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px;
+}
+
+input[type=button] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=button]:hover {
+  background-color: #45a049;
+}
+
+
+/* Table attributes */
 table {
-  /* margin: 0 auto; */
   border-collapse: collapse;
 }
 
@@ -50,46 +97,54 @@ table tr td:hover {
 }
 
 
-/* testing */
-
-input[type=text], select, textarea {
-  width: 50%;
-  padding: 12px; 
-  border: 1px solid #ccc;
-  border-radius: 4px; 
-  box-sizing: border-box; 
-  margin-top: 6px; 
-  margin-bottom: 16px;
+/* header */
+#header {
+  margin-top: 0px;
+  padding-bottom: 140px;
 }
 
-input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
+#header img {
+  display: block;
+  height: 100px;
+}  
+
+.left-column {
+  position:absolute; 
+  left: 0px; 
+  width: 33.3%; 
+}
+.center-column {
+  position:absolute; 
+  left:33.3%; 
+  width: 33.3%;
+}
+.center-column #cutter {
+  display: block;
+  margin: auto;
 }
 
-/* hover over the submit button */
-input[type=submit]:hover {
-  background-color: #45a049;
+.right-column {
+  position:absolute; 
+  left: 66.6%; 
+  width: 33.3%; 
 }
 
-.container {
-  padding-top: 40px;
-  padding-bottom: 40px;
+.right-column #salmon {
+  display: block;
+  float: right;
 }
 
-/* testing */
 
-div {
-  padding-top: 40px;
+/* Footer attributes */
+#footer {
+  height: 60px;
+  width: 100%;
+  background: #d3d3d3;
+  text-align: center;
 }
 
-div img {
-  display: inline-block;
-  width: 33%;
-  height: auto;
-  vertical-align: middle;
-} 
+#footer a {
+  color: rgb(0, 64, 255);
+  position: relative;
+  top: 40%;
+}
